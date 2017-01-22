@@ -32,6 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\CSkin16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.8.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +58,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPortScan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +76,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPortScan.resx">
       <DependentUpon>FormPortScan.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +104,612 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20120818113914742_easyicon_cn_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20120818113914742_easyicon_cn_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20120824033434910_easyicon_cn_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20120910030548870_easyicon_cn_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20120910031018598_easyicon_cn_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddBtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afternoon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_head_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_face.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_flirtationface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_inputassist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_richface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_screen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_screen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_sendpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_highlight_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all_inside_bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allbtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allbtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AM_MenuICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_icon_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_icon_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_icon_401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AV_Accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AV_Accept1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AV_New_Mic_Style3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AV_Refuse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AV_VDC_Bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\away %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b9m0_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackPalace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Skin_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Skin_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Skin_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cameraDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_hightlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_pushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_tick_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_tick_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_tick_pushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnMerged.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ContactTipsVASFlagExt_Camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conversation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_back_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_back_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_left_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_left_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_right_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_right_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document 2 Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firstPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\format-text-bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frameBorderEffect_mouseDownDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frameBorderEffect_normalDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GG64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GVideo_Icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GVideoTurnOffVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GVideoTurnOnVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GVShareVideoCloseSpk_MouseOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GVShareVideoCloseSpk_Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HDVideoHangs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HDVideoPiP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_weibo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgRjp.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imoffline %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imonline %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputbox_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lastPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_btn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_btn_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\micDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mima_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mima_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinIcons_017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NetState_Point4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\night.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal_group_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Norml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureBox1.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prePage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qme %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQAddBuddyNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remind_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoteHelp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smiley Happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spin_normal_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texture2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolbarBtnDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolbarBtnNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trad_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VASFlagEnable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VideoWaitToAnswer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce_press.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

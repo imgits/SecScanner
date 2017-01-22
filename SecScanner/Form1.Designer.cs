@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton_PortScan = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_ExportIp = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.toolStripButton_PortScan = new System.Windows.Forms.ToolStripButton();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.listViewIp = new System.Windows.Forms.ListView();
-            this.toolStripButton_ExportIp = new System.Windows.Forms.ToolStripButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -71,6 +71,25 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton_PortScan
+            // 
+            this.toolStripButton_PortScan.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_PortScan.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_PortScan.Image")));
+            this.toolStripButton_PortScan.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_PortScan.Name = "toolStripButton_PortScan";
+            this.toolStripButton_PortScan.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButton_PortScan.Text = "端口扫描";
+            // 
+            // toolStripButton_ExportIp
+            // 
+            this.toolStripButton_ExportIp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_ExportIp.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_ExportIp.Image")));
+            this.toolStripButton_ExportIp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_ExportIp.Name = "toolStripButton_ExportIp";
+            this.toolStripButton_ExportIp.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButton_ExportIp.Text = "导出IP";
+            this.toolStripButton_ExportIp.Click += new System.EventHandler(this.toolStripButton_ExportIp_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 653);
@@ -96,6 +115,14 @@
             this.splitContainer1.SplitterDistance = 291;
             this.splitContainer1.TabIndex = 3;
             // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(291, 590);
+            this.treeView1.TabIndex = 0;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -118,39 +145,6 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(291, 590);
-            this.treeView1.TabIndex = 0;
-            // 
-            // toolStripButton_PortScan
-            // 
-            this.toolStripButton_PortScan.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_PortScan.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_PortScan.Image")));
-            this.toolStripButton_PortScan.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_PortScan.Name = "toolStripButton_PortScan";
-            this.toolStripButton_PortScan.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButton_PortScan.Text = "端口扫描";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "earth_scan.png");
-            // 
             // listViewIp
             // 
             this.listViewIp.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -162,15 +156,21 @@
             this.listViewIp.UseCompatibleStateImageBehavior = false;
             this.listViewIp.View = System.Windows.Forms.View.Details;
             // 
-            // toolStripButton_ExportIp
+            // tabPage2
             // 
-            this.toolStripButton_ExportIp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_ExportIp.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_ExportIp.Image")));
-            this.toolStripButton_ExportIp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_ExportIp.Name = "toolStripButton_ExportIp";
-            this.toolStripButton_ExportIp.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButton_ExportIp.Text = "导出IP";
-            this.toolStripButton_ExportIp.Click += new System.EventHandler(this.toolStripButton_ExportIp_Click);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(570, 564);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "earth_scan.png");
             // 
             // Form1
             // 
@@ -181,11 +181,16 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.SetChildIndex(this.menuStrip1, 0);
+            this.Controls.SetChildIndex(this.toolStrip1, 0);
+            this.Controls.SetChildIndex(this.statusStrip1, 0);
+            this.Controls.SetChildIndex(this.splitContainer1, 0);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

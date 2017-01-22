@@ -22,8 +22,8 @@ namespace SecScanner
 
     class IpDatebase
     {
-        public List<Ipv4Range> ipranges = new List<Ipv4Range>();
-
+        public List<Ipv4Range> IpRanges = new List<Ipv4Range>();
+        public List<string> IpAreas = new List<string>(); 
         public void Load()
         {
             string[] all_lines = File.ReadAllLines(@"..\..\..\delegated-apnic-latest.txt");
@@ -33,6 +33,10 @@ namespace SecScanner
                 if (!ip_line.StartsWith("apnic|")) continue;
                 string[] ip_items = ip_line.Split(new char[] { '|' });
                 if (ip_items.Length != 7 || ip_items[2] != "ipv4") continue;
+                if (!IpAreas.Contains(ip_items[1]))
+                {
+                    IpAreas.Add(ip_items[1]);
+                }
                 Ipv4Range iprange = new Ipv4Range();
                 iprange.iCode = ((int)ip_items[1][0]) * 256 + (int)(int)ip_items[1][1];
                 iprange.AreaCode = ip_items[1];
@@ -42,7 +46,7 @@ namespace SecScanner
                 iprange.ip_start = IPToNumber(iprange.IpStart);
                 iprange.ip_count = UInt32.Parse(iprange.IpCount);
                 iprange.IpEnd = NumberToIP(iprange.ip_start + iprange.ip_count);
-                ipranges.Add(iprange);
+                IpRanges.Add(iprange);
             }
             return;
         }
