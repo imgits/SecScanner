@@ -35,7 +35,7 @@ namespace SecScanner
                     file.WriteLine("total ip:" + total_ip);
                     file.Close();
                 }
-            }
+            } 
             //Application.Run(new Form1());
             Application.Run(new FormLogin());
         }
